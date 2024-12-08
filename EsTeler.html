@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es Teler Sultan Jatinangor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+</head>
+<body>
+    <header class="header">
+        <h2>Es Teler Jatinangor</h2>
+            
+                <div class="dropdown-content" id="menu-dropdown">
+                    <a href="#">Gorengan Bu Ade</a>
+                    <a href="#">PUSAT ES</a>
+                    <a href="#">Fotocopy</a>
+                    <a href="#">Warung Audrey Food</a>
+                    <a href="#">Seblak Hot Jeletot Teh Eva</a>
+                    <a href="#">Hi.Pod</a>
+                    <a href="#">Es Teler Sultan Jatinangor</a>
+                    <a href="#">Batagor 486</a>
+
+                </div>
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart" id="cart-btn" onclick="openCart()"></i>
+                <span class="cart-badge" id="cart-count">0</span> <!-- Badge hanya menampilkan jumlah -->
+            </div>
+            
+            </div>            
+        </div>
+    </header>
+
+    <section id="store-details">
+        <img src="images/Es teler.jpg" alt="Es Teler Sultan Jatinangor">
+        <p>Es Teler dengan Berbagai Varian</p>
+        <p><strong>Penilaian: 4.9</strong> | 999+ ulasan</p>
+    </section>
+
+    <section id="menu-section">
+        <h2>Menu Es Teler Jatinangor</h2>
+        <div class="order-items">
+            <div class="order-card">
+                <img src="images/es teler sultan original.jpg" alt="Es Teler Original">
+                <div class="card-content">
+                    <h3>Es Teler Original</h3>
+                    <p>Rp10.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Es Teler Original', 10000)">-</button>
+                        <span class="quantity" id="quantity-Es Teler Original">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Es Teler Original', 10000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Es Teler Original', 10000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <img src="images/es teler sultan jumbo.jpg" alt="Es Teler Original Jumbo">
+                <div class="card-content">
+                    <h3>Es Teler Original Jumbo</h3>
+                    <p>Rp15.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Es Teler Original Jumbo', 15000)">-</button>
+                        <span class="quantity" id="quantity-Es Teler Original Jumbo">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Es Teler Original Jumbo', 15000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Es Teler Original Jumbo', 15000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <img src="images/es teler kelapa alpukat.jpg" alt="Es Teler Kelapa Alpukat">
+                <div class="card-content">
+                    <h3>Es Teler Kelapa Alpukat</h3>
+                    <p>Rp12.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Es Teler Kelapa Alpukat', 12000)">-</button>
+                        <span class="quantity" id="quantity-Es Teler Kelapa Alpukat">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Es Teler Kelapa Alpukat', 12000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Es Teler Kelapa Alpukat', 12000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <img src="images/es teler kelapa alpukat jumbo.webp" alt="Es Teler Kelapa Alpukat Jumbo">
+                <div class="card-content">
+                    <h3>Es Teler Kelapa Alpukat Jumbo</h3>
+                    <p>Rp17.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Es Teler Kelapa Alpukat Jumbo', 17000)">-</button>
+                        <span class="quantity" id="quantity-Es Teler Kelapa Alpukat Jumbo">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Es Teler Kelapa Alpukat Jumbo', 17000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Es Teler Kelapa Alpukat Jumbo', 17000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <img src="images/es teler sultan + durian.jpg" alt="Es Teler Durian">
+                <div class="card-content">
+                    <h3>Es Teler Durian</h3>
+                    <p>Rp17.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Es Teler Durian', 17000)">-</button>
+                        <span class="quantity" id="quantity-Es Teler Durian">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Es Teler Durian', 17000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Es Teler Durian', 17000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <img src="images/es teler sultan + durian jumbo.webp" alt="Es Teler Durian Jumbo">
+                <div class="card-content">
+                    <h3>Es Teler Durian Jumbo</h3>
+                    <p>Rp22.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Es Teler Durian Jumbo', 22000)">-</button>
+                        <span class="quantity" id="quantity-Es Teler Durian Jumbo">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Es Teler Durian Jumbo', 22000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Es Teler Durian Jumbo', 22000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <img src="images/es teler sultan + keju.jpg" alt="Es Teler Keju">
+                <div class="card-content">
+                    <h3>Es Teler Keju</h3>
+                    <p>Rp15.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Es Teler Keju', 15000)">-</button>
+                        <span class="quantity" id="quantity-Es Teler Keju">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Es Teler Keju', 15000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Es Teler Keju', 15000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <img src="images/es teler sultan + keju jumbo.jpg" alt="Es Teler Keju Jumbo">
+                <div class="card-content">
+                    <h3>Es Teler Keju Jumbo</h3>
+                    <p>Rp20.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Es Teler Keju Jumbo', 20000)">-</button>
+                        <span class="quantity" id="quantity-Es Teler Keju Jumbo">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Es Teler Keju Jumbo', 20000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Es Teler Keju Jumbo', 20000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- Modal Konfirmasi Pesanan -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Keranjang Belanja</h2>
+            <div id="cart-items">
+                <!-- Items akan diisi secara dinamis -->
+            </div>
+            <div class="total-section">
+                <p><strong>Total Pembayaran: <span id="total-price">Rp0</span></strong></p>
+            </div>
+            <button class="order-btn" id="place-order-btn" onclick="confirmOrder()">Buat Pesanan</button>
+        </div>
+    </div>
+
+    <!-- Modal Struk Pesanan -->
+    <div id="receipt-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReceiptModal()">&times;</span>
+            <h2>Struk Pesanan</h2>
+            <p><strong>Nama Toko:</strong> Es Teler Sultan </p>
+            <div id="receipt-items">
+                <!-- Daftar pesanan akan ditambahkan secara dinamis -->
+            </div>
+            <div class="total-section">
+                <p><strong>Total Pembayaran: <span id="receipt-total-price">Rp0</span></strong></p>
+            </div>
+
+            <!-- Metode Pembayaran -->
+            <div class="payment-method">
+                <h3>Metode Pembayaran</h3>
+                <label>
+                    <input type="radio" name="payment-method" value="cash" onclick="selectPaymentMethod('cash')" checked>
+                    Cash
+                </label>
+                <label>
+                    <input type="radio" name="payment-method" value="qris" onclick="selectPaymentMethod('qris')">
+                    QRIS
+                </label>
+            </div>
+
+             <!-- Gambar QRIS (disembunyikan secara default) -->
+             <div id="qris-image" style="display: none; text-align: center;">
+                <img src="images/qris.jpg" alt="QRIS" style="width: 200px; margin-top: 10px;">
+                <!-- Menampilkan metode pembayaran yang dipilih -->
+            <p><strong>Metode Pembayaran:</strong> <span id="payment-method-text">Qriss</span></p>
+            <button onclick="confirmOrderAndRedirect('Es Teler')">Pesan ke Es Teler</button>
+            </div>
+
+            <!-- Menampilkan metode pembayaran yang dipilih -->
+            <p><strong>Metode Pembayaran:</strong> <span id="payment-method-text">Cash</span></p>
+            <button onclick="confirmOrderAndRedirect('Es Teler')">Pesan ke Es Teler</button>
+        </div>
+    </div>
+
+    <!-- Tambahan untuk memisahkan file JS -->
+    <script src="script.js"></script>
+</body>
+</html>

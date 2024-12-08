@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struk Belanja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="showOrderSummary()">
+    <header>
+        <h2>Struk Belanja</h2>
+    </header>
+
+    <section id="order-summary">
+        <h3 id="store-name"></h3>
+        <p id="store-address"></p>
+
+        <h3>Pesanan:</h3>
+        <ul id="order-items-list">
+            <!-- Item pesanan akan dimuat di sini -->
+        </ul>
+
+        <div class="total-section">
+            <p><strong>Total Pembayaran: <span id="order-total-price">Rp0</span></strong></p>
+        </div>
+
+        <h3>Metode Pembayaran</h3>
+        <p id="payment-method">-</p>
+    </section>
+
+    <script>
+        function showOrderSummary() {
+            const orderData = JSON.parse(localStorage.getItem("orderData"));
+
+            if (orderData) {
+                document.getElementById("store-name").textContent = orderData.storeName;
+                document.getElementById("store-address").textContent = orderData.storeAddress;
+                document.getElementById("order-total-price").textContent = "Rp" + orderData.totalPrice;
+                document.getElementById("payment-method").textContent = orderData.paymentMethod;
+
+                const orderItemsList = document.getElementById("order-items-list");
+                orderData.items.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = `${item.name} - Jumlah: ${item.quantity} - Harga: Rp${item.price}`;
+                    orderItemsList.appendChild(li);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

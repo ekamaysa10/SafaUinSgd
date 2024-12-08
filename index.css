@@ -1,0 +1,152 @@
+body {
+    width: 100%;
+    max-width: 1220px;
+    background-color:#f9ad0c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto; /* Aktifkan scroll vertikal */
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    align-items: center;
+}
+
+/* Tata Letak Utama */
+.layout-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Deskripsi Website */
+.description-container {
+    flex: 1;
+    max-width: 60%;
+    text-align: left;
+}
+
+.description-container h1 {
+    font-size: 2.2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.description-container p {
+    font-size: 1em;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Animasi atau Stiker */
+.animation-container {
+    margin: 20px 0;
+}
+
+.animation {
+    width: 200px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animasi Mengambang */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.signin-section { /* Membuat wrapper untuk sign-in */
+    display: flex;
+    margin-top: 10px;
+    justify-content: center; /* Memastikan kontainer sign-in terletak di tengah */
+    align-items: center; /* Vertically center the items */
+    height: calc(100vh - 80px); /* Make sure to leave space for the header/footer if necessary */
+    margin: 40px 0; /* Memberikan ruang atas dan bawah */
+}
+
+.signin-container {
+    flex: 0 0 35%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.signin-container h2 {
+    text-align: center;
+    color: #f9ad0c;
+    margin-bottom: 20px;
+}
+
+.signin-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-container label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.signin-container input[type="text"],
+.signin-container input[type="email"],
+.signin-container input[type="password"],
+.signin-container input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.signin-container button[type="submit"] {
+    background-color: #f9ad0c;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signin-container button[type="submit"]:hover {
+    background-color: #f9ad0c;
+}
+
+@media (max-width: 768px) {
+    .signin-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+}
+
+    .description-container, .signin-container {
+        max-width: 100%;
+        text-align: center;
+    }

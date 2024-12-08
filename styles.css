@@ -1,0 +1,1133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9ad0c;
+    background-size: cover;
+    color: #333;
+}
+
+.header {
+    background-color: #f9ad0c; /* semi-transparent background */
+    padding: 10px;
+
+    justify-content: space-between;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex; /* Aktifkan Flexbox */
+    align-items: center; /* Posisikan secara vertikal di tengah */
+    justify-content: center; 
+}
+
+
+/* Gaya untuk teks h2 di dalam header */
+.header h2 {
+    font-size: 24px; /* Ukuran teks */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* Teks tebal */
+    margin: 0; /* Hilangkan margin bawaan */
+    text-transform: uppercase; /* Huruf besar semua */
+    letter-spacing: 2px; /* Jarak antar huruf */
+    align-items: center;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .header {
+        padding: 15px; /* Sesuaikan jarak dalam */
+    }
+
+    .header h2 {
+        font-size: 18px; /* Ukuran teks lebih kecil */
+    }
+}
+
+.logo-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Membuat elemen memenuhi ruang */
+}
+
+.logo img {
+    height: 50px;
+}
+
+
+/* Pengaturan untuk menu-icon dan dropdown */
+.menu-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-icon button {
+    background-color: #4CAF50; /* Hijau lembut */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu-icon button:hover {
+    background-color: #45a049; /* Hijau lebih gelap */
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Abu-abu terang */
+}
+
+/* Tampilkan dropdown saat menu diklik */
+.menu-icon:hover .dropdown-content {
+    display: block;
+}
+
+/* Pengaturan untuk info-container */
+.info-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    z-index: 1000;
+}
+
+.info-container h2 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.info-container p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: darkred;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .info-container {
+        width: 90%;
+        max-width: none;
+    }
+    
+    .menu-icon button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .dropdown-content a {
+        padding: 8px 12px;
+    }
+}
+
+
+/* Styling untuk Section About */
+#about {
+    padding: 60px 20px; /* Memberikan padding yang lebih besar di sekitar section */
+    background-color: #f5f5f5; /* Warna latar belakang yang lembut dan modern */
+    text-align: center; /* Mengatur teks agar rata tengah */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan ringan untuk kesan kedalaman */
+}
+
+/* Container untuk profile */
+#about .container {
+    max-width: 1200px; /* Membatasi lebar container */
+    margin: 0 auto; /* Memposisikan container di tengah */
+    padding: 30px;
+    background-color: #f9ad0c; /* Warna latar belakang putih untuk kontainer */
+    border-radius: 10px; /* Membuat sudut kontainer melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut di sekitar container */
+}
+
+/* Styling untuk heading (judul) */
+
+/* Profile container untuk gambar dan deskripsi */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menyusun elemen di tengah */
+    justify-content: center;
+    text-align: center;
+    padding: 20px; /* Memberikan padding di sekitar elemen profile */
+}
+
+/* Gambar profil */
+.about-images {
+    width: 10px; /* Ukuran gambar lebih kecil (misalnya 50px) */
+    height: 10px; /* Membuat gambar berbentuk bulat */
+    border-radius: 50%; /* Membuat gambar bulat */
+    object-fit: cover; /* Memastikan gambar tidak pecah */
+    margin-bottom: 20px; /* Memberikan jarak antara gambar dan teks */
+    border: 3px solid #f0f0f0; /* Menambahkan border halus di sekitar gambar */
+    transition: transform 0.3s ease-in-out; /* Efek transisi untuk hover */
+}
+
+/* Efek hover pada gambar */
+.about-images:hover {
+    transform: scale(1.1); /* Efek pembesaran gambar saat hover */
+}
+
+
+/* Styling untuk deskripsi profil */
+#about p {
+    font-size: 15px; /* Ukuran font sedang untuk deskripsi */
+    color: #f0f0f0; /* Warna teks lebih terang untuk kesan modern */
+    line-height: 1.8; /* Jarak antar baris teks */
+    margin-top: 10px; /* Memberikan jarak antara gambar dan teks */
+    max-width: 800px; /* Membatasi lebar teks agar tidak terlalu lebar */
+    margin: 0 auto; /* Memposisikan teks di tengah */
+}
+
+/* Menambahkan responsivitas untuk perangkat kecil */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 32px; /* Menurunkan ukuran font judul di perangkat kecil */
+    }
+
+    .about-images {
+        width: 100px; /* Ukuran gambar lebih kecil untuk perangkat kecil */
+        height: 100px; /* Menjaga agar gambar tetap bulat */
+    }
+
+    #about p {
+        font-size: 16px; /* Menurunkan ukuran font deskripsi di perangkat kecil */
+    }
+}
+.about-container {
+    display: flex; /* Mengatur elemen dalam kontainer menjadi sejajar secara horizontal */
+    justify-content: center; /* Menyusun elemen secara horizontal di tengah */
+    align-items: center; /* Menjaga elemen tetap rata secara vertikal */
+    gap: 30px; /* Memberikan jarak antara kedua elemen <p> */
+}
+
+.about-container p {
+    margin: 0; /* Menghapus margin default pada <p> */
+}
+
+.kontak-container {
+    display: flex; /* Menjadikan kontainer fleksibel */
+    justify-content: center; /* Menyusun elemen secara horizontal di tengah */
+    align-items: center; 
+    gap: 30px;
+    width: 80%; /* Menentukan lebar kontainer lebih besar, sesuaikan sesuai kebutuhan */
+    max-width: 1200px; /* Membatasi lebar kontainer agar tidak melebihi batas tertentu */
+    margin: 0 auto; /* Mengatur margin untuk memusatkan kontainer */
+    padding: 20px; /* Menambahkan ruang di dalam kontainer */
+}
+
+.kontak-container p {
+    margin: 0; /* Menghapus margin default pada <p> */
+    display: flex; /* Menyusun elemen <span> secara horizontal */
+    gap: 30px; /* Menambahkan jarak antara span */
+}
+
+.kontak-container span {
+    font-size: 18px; /* Menyesuaikan ukuran font agar terlihat lebih besar */
+    color: #333; /* Warna teks */
+}
+
+
+/* Profile container styles */
+.profile-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Global styles */
+.profile-body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Untuk memastikan halaman selalu memenuhi tinggi layar */
+    margin: 0;
+    background-color: #f0f0f0; /* Warna latar belakang yang lebih lembut */
+}
+
+/* Container for the profile content */
+.profile-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Membatasi lebar agar tampilan tidak terlalu besar */
+    text-align: center; /* Menyusun semua teks di dalam kontainer menjadi tengah */
+    margin-left: 350px; /* Menghilangkan margin-left yang tidak responsif */
+    margin-top: 50px;
+}
+
+/* Heading styles */
+.profile-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f9ad0c;
+}
+
+/* Profile details styles */
+.profile-details {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.profile-details p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.profile-details strong {
+    font-weight: bold;
+}
+
+/* Button style */
+button {
+    background-color: #f9ad0c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e88b00; /* Warna tombol saat hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Untuk layar kecil, mengatur ukuran font dan margin */
+    .profile-container {
+        padding: 20px;
+        margin-left: 0;
+        margin-top: 20px;
+        max-width: 90%; /* Lebar maksimum untuk perangkat kecil */
+    }
+
+    .profile-container h2 {
+        font-size: 20px; /* Ukuran font lebih kecil di perangkat kecil */
+    }
+
+    .profile-details p {
+        font-size: 14px; /* Ukuran font lebih kecil di perangkat kecil */
+    }
+
+    button {
+        padding: 8px 16px; /* Tombol sedikit lebih kecil di perangkat kecil */
+        font-size: 14px; /* Ukuran font tombol lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Untuk layar sangat kecil, seperti ponsel */
+    .profile-container {
+        padding: 15px;
+        max-width: 95%; /* Lebar maksimum yang lebih besar untuk layar ponsel */
+    }
+
+    .profile-container h2 {
+        font-size: 18px; /* Ukuran font lebih kecil lagi untuk layar kecil */
+    }
+
+    .profile-details p {
+        font-size: 12px; /* Ukuran font lebih kecil untuk teks */
+    }
+
+    button {
+        padding: 6px 12px; /* Ukuran tombol lebih kecil untuk layar ponsel */
+        font-size: 12px; /* Ukuran font tombol lebih kecil */
+    }
+}
+
+
+
+/* Bagian search-bar */
+/* Gaya body dan header tetap sama */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px 10px 40px; /* Space for the icon */
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    outline: none;
+}
+
+.search-bar .fa-search {
+    position: absolute;
+    left: 10px;
+    color: #888;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+/* Hasil Pencarian */
+/* Hasil Pencarian - Default tersembunyi */
+.search-results {
+    display: none; /* Awalnya tersembunyi */
+    margin-top: 10px; /* Jarak vertikal dari bilah pencarian */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    width: calc(100% - 20px);
+    max-width: 300px;
+    left: 800px; /* Sesuaikan agar sejajar dengan input */
+    top: 50px; /* Jarak lebih spesifik dari elemen induk */
+}
+
+
+
+/* Hasil pencarian item */
+.search-result-item {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.search-result-item a:hover {
+    color: #f9ad0c;
+}
+
+/* Responsif pada perangkat mobile */
+@media (max-width: 767px) {
+    .search-bar {
+        max-width: 100%; /* Search bar mengisi lebar layar */
+    }
+
+    .search-results {
+        width: 100%; /* Lebar hasil pencarian sesuai dengan search bar */
+    }
+}
+
+
+
+
+
+/* Dropdown menu styles */
+.dropdown-content {
+    display: none; /* Tersembunyi secara default */
+    position: absolute;
+    background-color: #f9ad0c; /* Warna latar belakang */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    right: 0; /* Agar menu muncul di bawah icon bar */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9ad0c; /* Warna saat hover */
+}
+
+/* Bagian menu-icon */
+.menu-icon button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.menu-icon .fa-bars {
+    font-size: 24px;
+}
+
+.category {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+.category-btn {
+    background-color: #f9ad0c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    background-color: #f9ad0c;
+}
+
+/* Gaya judul-judul H2 */
+.popular-orders h2,
+#home-section h2,
+#makanan-section h2,
+#minuman-section h2,
+#fotocopy-section h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #f9ad0c; /* Latar belakang */
+    display: inline-block; /* Ukuran latar belakang sesuai dengan teks */
+    padding: 5px 15px; /* Tambahkan padding di sekitar teks */
+    border-radius: 10px; /* Membuat sudut latar belakang melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan halus */
+}
+
+.order-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Card Styles */
+.order-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 35%; /* Lebar kartu seragam */
+    min-width: 250px; /* Lebar minimum */
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.2s;
+    margin-bottom: 15px; /* Kurangi jarak antar kartu */
+}
+
+/* Container */
+.order-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Tidak perlu selalu di tengah vertikal */
+    flex-wrap: wrap;
+    gap: 10px; /* Kurangi spasi antar elemen */
+    min-height: auto; /* Hapus batas tinggi agar lebih fleksibel */
+    padding: 10px; /* Kurangi padding untuk menghemat ruang */
+}
+
+/* Gambar pada kartu */
+.order-card img {
+    width: 100%; /* Gambar mengikuti lebar kartu */
+    height: 200px; /* Tinggi gambar seragam */
+    object-fit: cover; /* Memotong gambar untuk mengisi ukuran tanpa distorsi */
+    border-radius: 10px 10px 0 0; /* Sudut atas membulat */
+}
+
+
+.card-content {
+    padding: 10px 0;
+}
+
+.card-content h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #777;
+}
+
+.time {
+    font-weight: bold;
+    color: #f9ad0c;
+}
+
+.order-btn {
+    background-color: #f9ad0c;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background-color: #f9ad0c;
+}
+
+/* Untuk layar kecil (ponsel) */
+@media (max-width: 600px) {
+    .order-card {
+        width: 100%; /* Kartu memenuhi seluruh lebar layar */
+        min-width: auto; /* Tidak ada batas minimum */
+    }
+
+    .order-container {
+        gap: 5px; /* Kurangi spasi antar elemen untuk layar kecil */
+        padding: 5px; /* Kurangi padding */
+    }
+
+    .order-card img {
+        height: 150px; /* Kurangi tinggi gambar untuk layar kecil */
+    }
+
+    .card-content h3 {
+        font-size: 14px; /* Perkecil font pada judul */
+    }
+
+    .card-content p {
+        font-size: 12px; /* Perkecil font pada deskripsi */
+    }
+
+    .order-btn {
+        padding: 6px 12px; /* Sesuaikan tombol agar tidak terlalu besar */
+    }
+}
+
+/* Untuk layar sedang (tablet) */
+@media (max-width: 900px) {
+    .order-card {
+        width: 45%; /* Kartu memenuhi setengah lebar */
+    }
+
+    .order-container {
+        gap: 8px; /* Sedikit kurangi spasi antar elemen */
+    }
+
+    .order-card img {
+        height: 180px; /* Kurangi tinggi gambar sedikit */
+    }
+}
+
+/* Untuk layar besar (desktop) */
+@media (min-width: 901px) {
+    .order-card {
+        width: 30%; /* Lebar kartu sedikit lebih kecil */
+    }
+}
+
+
+
+
+/* Scoped untuk halaman menu.html */
+.menu-page .order-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px; /* Atur jarak antar elemen */
+    padding: 15px;
+    background-color: #f5f5f5; /* Warna latar khusus halaman ini */
+}
+
+.menu-page .order-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px; /* Lebar berbeda untuk halaman menu */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-page .order-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-page .order-card img {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.menu-page .card-content {
+    padding: 12px;
+    text-align: center;
+}
+
+.menu-page .card-content h3 {
+    font-size: 1.4em;
+    color: #444;
+}
+
+.menu-page .card-content p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.menu-page .card-content .time {
+    font-weight: bold;
+    color:#f9ad0c; /* Warna khusus untuk waktu di menu.html */
+}
+
+.menu-page .order-btn {
+    margin-top: 12px;
+    padding: 8px 18px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #f9ad0c; /* Warna tombol berbeda */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-page .order-btn:hover {
+    background-color: #f9ad0c;
+}
+
+
+
+/* Atur gaya umum untuk section dengan id store-details */
+#store-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9; /* Warna latar belakang yang lembut */
+    border: 1px solid #ddd; /* Tambahkan border untuk mempertegas */
+    border-radius: 8px; /* Sudut membulat */
+    padding: 20px; /* Ruang di dalam */
+    width: 300px; /* Lebar tetap */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    margin: 0 auto; /* Pusatkan */
+    text-align: center; /* Teks di tengah */
+}
+
+/* Gaya untuk gambar */
+#store-details img {
+    width: 250px; /* Lebar tetap untuk gambar */
+    height: 200px; /* Tinggi tetap untuk gambar */
+    object-fit: cover; /* Menjaga rasio aspek dengan memotong jika perlu */
+    border-radius: 8px; /* Sudut gambar tetap membulat */
+    margin-bottom: 15px; /* Jarak di bawah gambar */
+}
+
+
+/* Gaya untuk paragraf deskripsi */
+#store-details p {
+    font-size: 16px; /* Ukuran font */
+    color: #333; /* Warna teks */
+    margin: 5px 0; /* Jarak antar paragraf */
+}
+
+/* Gaya untuk teks penilaian */
+#store-details p strong {
+    color: #f9ad0c; /* Warna teks yang mencolok */
+    font-size: 18px; /* Ukuran font lebih besar */
+}
+
+/* Styles tambahan dari Sign In */
+
+.signin-section { /* Membuat wrapper untuk sign-in */
+    display: flex;
+    margin-top: 10px;
+    justify-content: center; /* Memastikan kontainer sign-in terletak di tengah */
+    align-items: center; /* Vertically center the items */
+    height: calc(100vh - 80px); /* Make sure to leave space for the header/footer if necessary */
+    margin: 40px 0; /* Memberikan ruang atas dan bawah */
+}
+
+.signin-container {
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Full width for responsiveness */
+    margin: 40px auto 0; /* Center the container horizontally */
+}
+
+.signin-container h2 {
+    text-align: center;
+    color: #f9ad0c;
+    margin-bottom: 20px;
+}
+
+.signin-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-container label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.signin-container input[type="text"],
+.signin-container input[type="email"],
+.signin-container input[type="password"],
+.signin-container input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.signin-container button[type="submit"] {
+    background-color: #f9ad0c;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signin-container button[type="submit"]:hover {
+    background-color: #f9ad0c;
+}
+
+@media (max-width: 768px) {
+    .signin-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+}
+
+.close:hover {
+    color: black;
+}
+
+
+.modal h2 {
+    margin-top: 0;
+    color: #f9ad0c;
+}
+
+#cart-items {
+    max-height: 200px; /* Batas tinggi konten keranjang */
+    overflow-y: auto; /* Tambahkan scroll jika item keranjang banyak */
+    margin-bottom: 20px;
+}
+
+#cart-items p {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-items p span {
+    font-weight: bold;
+}
+
+.total-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#total-price {
+    font-size: 18px;
+    color: #f9ad0c;
+}
+
+#place-order-btn {
+    background-color: #f9ad0c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#place-order-btn:hover {
+    background-color: #f9ad0c;
+}
+
+/* Animasi untuk modal muncul */
+.modal-content {
+    animation-name: animasi-muncul;
+    animation-duration: 0.4s;
+}
+
+@keyframes animasi-muncul {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+#store-details {
+    text-align: center; /* Mengatur semua konten di dalam section menjadi di tengah */
+    padding: 20px;
+}
+
+#store-details img {
+    display: block;
+    margin: 20px auto; /* Mengatur gambar agar berada di tengah secara horizontal */
+    max-width: 100%; /* Agar gambar responsif */
+    height:auto; /* Menyesuaikan tinggi gambar secara proporsional */
+    border-radius: 10px; /* Membuat sudut gambar melengkung (opsional) */
+}
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Mengatur tombol di tengah */
+    margin-top: 10px;
+}
+
+.quantity-btn {
+    background-color: #f9ad0c;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px; /* Jarak antara tombol */
+}
+
+.quantity {
+    font-size: 16px;
+    margin: 0 10px; /* Jarak antara angka dan tombol */
+}
+#menu-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Mengatur gaya untuk judul menu */
+#menu-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Mengatur tampilan item pesanan */
+.order-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Gaya umum untuk kartu pesanan */
+.order-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Gaya gambar dalam kartu */
+.order-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk badge keranjang */
+.cart-badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: red;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.cart-icon i {
+    font-size: 24px;
+}
+
+.cart-badge {
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+#order-summary {
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#order-summary h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.total-section p, #order-summary ul {
+    font-size: 1em;
+}
+
+.payment-method {
+    margin-top: 20px;
+}
+
+.payment-method label {
+    margin-right: 15px;
+    font-size: 16px;
+}
+.modal-content {
+    max-height: 80vh; /* Batasi tinggi modal agar tidak melebihi viewport */
+    overflow-y: auto; /* Aktifkan scroll jika konten melebihi tinggi modal */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+body.modal-open {
+    overflow: hidden; /* Mencegah halaman utama scroll */
+}
+@media (max-width: 768px) {
+    .order-card {
+        width: 100%; /* Kartu penuh di layar kecil */
+    }
+
+    .order-card img {
+        height: 150px; /* Kurangi tinggi gambar untuk layar kecil */
+    }
+}
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Safa</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Kontainer Utama -->
+    <div class="layout-container">
+        <!-- Deskripsi Website -->
+        <div class="description-container">
+            <div class="logo-container">
+                <img src="images/logo utama.png" alt="Logo Safa" class="logo">
+            </div>
+            <h1>Yuk, permudah hidupmu dengan <span class="highlight">Safa</span>!</h1>
+            <p>Website praktis yang bikin kamu bisa pesan makanan, jasa fotokopi, hingga kebutuhan warung favorit di sekitar UIN Sunan Gunung Djati Bandung. Nikmati kemudahan transaksi digital sekaligus dukung pedagang kecil lokal. Solusi cepat, efisien, dan ramah kantong, semua ada di <span class="highlight">Safa</span>!</p>
+            <div class="animation-container">
+                <img src="images/baso.png" alt="Makanan" class="animation">
+                <img src="images/minum.png" alt="Minuman" class="animation">
+            </div>
+        </div>
+
+        <!-- Form Sign In -->
+        <div class="signin-container">
+            <h2>Sign In</h2>
+            <form action="#" method="post" onsubmit="handleSignIn(event)">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+
+                <button type="submit">Sign In</button>
+            </form>
+            <p>Belum punya akun? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function handleSignIn(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser && storedUser.email === email && storedUser.password === password) {
+                alert('Sign In successful!');
+                window.location.href = 'Menu1.html';
+            } else {
+                alert('Invalid email or password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Safa App</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="logo">
+                <img src="images/logo utama.png" alt="Safa Logo">
+            </div>
+            
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search, would you like to it" oninput="searchItems()">
+            </div>
+            
+            <!-- Area untuk menampilkan hasil pencarian -->
+            <div id="search-results" class="search-results"></div>
+            
+            
+            
+            <div class="menu-icon">
+                <button onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+                <div id="dropdown-menu" class="dropdown-content">
+                    <nav>
+                        <ul>
+                            <a href="#home">Home</a><!-- Pastikan Home berfungsi dengan benar -->
+                            <a href="profil.html">Profil</a><!-- Perbaiki href ke profil.html -->
+                            <a href="#about">About</a>
+                            <a href="#kontak">Kontak</a>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+            
+                <script src="script.js"></script>
+            </div>
+        </div>
+    </body>
+    
+        <!-- Tambahkan Tombol Kategori -->
+        <div class="category">
+            <button class="category-btn" onclick="showSection('home')">Home</button>
+            <button class="category-btn" onclick="showSection('makanan')">Makanan</button>
+            <button class="category-btn" onclick="showSection('minuman')">Minuman</button>
+            <button class="category-btn" onclick="showSection('fotocopy')">Fotocopy</button>
+        </div>
+
+        <!-- Home Section (Menampilkan Semua Kategori) -->
+        <section id="home-section">
+            <h2>Pesanan populer</h2>
+        <div class="menu-page">
+            <div class="order-container">
+            <div class="order-items">
+                <div class="order-card">
+                    <img src="images/gorengan.jpg" alt="Gorengan Bu Ade">
+                    <div class="card-content">
+                        <h3>Gorengan Bu Ade</h3>
+                        <p>Pintu DPR UIN</p>
+                        <p class="time">08.00-16.00</p>
+                        <a href="Gorengan.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-container">
+                <div class="order-card">
+                    <img src="images/jus.jpg" alt="PUSAT ES">
+                    <div class="card-content">
+                        <h3>PUSAT ES</h3>
+                        <p>Jalan Manisi</p>
+                        <p class="time">09.00-21.00</p>
+                        <a href="Jus.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-container">
+                <div class="order-card">
+                    <img src="images/fotocopy.jpg" alt="Fotocopy">
+                    <div class="card-content">
+                        <h3>Fotocopy</h3>
+                        <p>Jalan Manisi</p>
+                        <p class="time">08.00-16.00</p>
+                        <a href="Fotocopy.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="order-container">
+                <div class="order-card">
+                    <img src="images/Audrey Food.jpg" alt="Audrey Food">
+                    <div class="card-content">
+                        <h3>Audrey Food</h3>
+                        <p>Pintu Belakang Manisi</p>
+                        <p class="time">08.00-22.00</p>
+                        <a href="Audrey Food.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="order-container">
+                <div class="order-card">
+                    <img src="images/Seblak.jpg" alt="Seblak">
+                    <div class="card-content">
+                        <h3>Seblak Hot Jeletot Teh Eva</h3>
+                        <p>Depan Uin Bandung(jalan A.H Nasution)</p>
+                        <p class="time">09.00-19.00</p>
+                        <a href="Seblak.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-container">
+                <div class="order-card">
+                    <img src="images/Hi pud.jpg" alt="Hi.Pod">
+                    <div class="card-content">
+                        <h3>Hi.Pod</h3>
+                        <p>Fakultas Sains dan Teknologi</p>
+                        <a href="HiPod.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-container">
+                <div class="order-card">
+                    <img src="images/Es teler.jpg" alt="Es Teler Sultan Jatinangor">
+                    <div class="card-content">
+                        <h3>Es Teler Sultan Jatinangor</h3>
+                        <p>Jalan Raya Cipadung</p>
+                        <p class="time">09.00-20.00</p>
+                        <a href="EsTeler.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-container">
+                <div class="order-card">
+                    <img src="images/Batagor.jpg" alt="Batagor 486">
+                    <div class="card-content">
+                        <h3>Batagor 486</h3>
+                        <p>Jalan Raya Cipadung</p>
+                        <p class="time">08.00-20.00</p>
+                        <a href="Batagor.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </section>
+
+        <!-- Section Makanan -->
+        <section id="makanan-section" style="display: none;">
+            <h2>Makanan</h2>
+            <div class="menu-page">
+            <div class="order-items">
+                <div class="order-container">
+                    <div class="order-items">
+                        <div class="order-card">
+                            <img src="images/gorengan.jpg" alt="Gorengan Bu Ade">
+                            <div class="card-content">
+                                <h3>Gorengan Bu Ade</h3>
+                                <p>Pintu DPR UIN</p>
+                                <p class="time">08.00-16.00</p>
+                                <a href="Gorengan.html"><button class="order-btn">Lihat</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-container">
+                <div class="order-card">
+                        <img src="images/Audrey Food.jpg" alt="Audrey Food">
+                        <div class="card-content">
+                            <h3>Audrey Food</h3>
+                            <p>Pintu Belakang Manisi</p>
+                            <p class="time">08.00-22.00</p>
+                            <a href="Audrey Food.html"><button class="order-btn">Lihat</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-container">
+                    <div class="order-card">
+                        <img src="images/Seblak.jpg" alt="Seblak">
+                        <div class="card-content">
+                            <h3>Seblak Hot Jeletot Teh Eva</h3>
+                            <p>Depan Uin Bandung(jalan A.H Nasution)</p>
+                            <p class="time">09.00-19.00</p>
+                            <a href="Seblak.html"><button class="order-btn">Lihat</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-container">
+                    <div class="order-card">
+                        <img src="images/Hi pud.jpg" alt="Hi.Pod">
+                        <div class="card-content">
+                            <h3>Hi.Pod</h3>
+                            <p>Fakultas Sains dan Teknologi</p>
+                            <a href="HiPod.html"><button class="order-btn">Lihat</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-container">
+                    <div class="order-card">
+                        <img src="images/Batagor.jpg" alt="Batagor 486">
+                        <div class="card-content">
+                            <h3>Batagor 486</h3>
+                            <p>Jalan Raya Cipadung</p>
+                            <p class="time">08.00-20.00</p>
+                            <a href="Batagor.html"><button class="order-btn">Lihat</button></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+
+        <!-- Section Minuman -->
+        <section id="minuman-section" style="display: none;">
+            <h2>Minuman</h2>
+
+            <div class="menu-page">
+            <div class="order-container">
+                <div class="order-card">
+                    <img src="images/jus.jpg" alt="PUSAT ES">
+                    <div class="card-content">
+                        <h3>PUSAT ES</h3>
+                        <p>Jalan Manisi</p>
+                        <p class="time">09.00-21.00</p>
+                        <a href="Jus.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="order-container">
+                <div class="order-card">
+                    <img src="images/Es teler.jpg" alt="Es Teler Sultan Jatinangor">
+                    <div class="card-content">
+                        <h3>Es Teler Sultan Jatinangor</h3>
+                        <p>Jalan Raya Cipadung</p>
+                        <p class="time">09.00-20.00</p>
+                        <a href="EsTeler.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Section Fotocopy -->
+        <section id="fotocopy-section" style="display: none;">
+            <h2>Fotocopy</h2>
+            <div class="menu-page">
+            <div class="order-container">
+                <div class="order-card">
+                    <img src="images/fotocopy.jpg" alt="Fotocopy">
+                    <div class="card-content">
+                        <h3>Fotocopy</h3>
+                        <p>Jalan Manisi</p>
+                        <p class="time">08.00-16.00</p>
+                        <a href="Fotocopy.html"><button class="order-btn">Lihat</button></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+        <section id="about">
+            <div class="container">
+                <div class="about-container">
+                    <img src="images/logo utama.png" class="profil-images">
+                    <p>SAFA adalah website yang memudahkan pemesanan layanan di sekitar Kampus UIN Sunan Gunung Djati Bandung, seperti makanan, jasa fotokopi, dan kebutuhan warung. Website ini juga memberikan rekomendasi pedagang kecil lokal serta dilengkapi dengan fitur pembayaran digital. Tujuan utama SAFA adalah mendukung pertumbuhan usaha kecil lokal dan meningkatkan akses pedagang kecil ke konsumen dengan solusi digital yang efisien dan mudah digunakan. Nama SAFA melambangkan ketenangan dan kemudahan dalam proses pemesanan, memberikan pengalaman nyaman dan bebas stres bagi penggunanya. Aplikasi ini hadir untuk mengatasi tantangan yang dihadapi oleh mahasiswa, masyarakat, dan pedagang kecil di lingkungan kampus, dengan harapan dapat memperlancar aktivitas sehari-hari, mendorong ekonomi lokal, dan memberikan kenyamanan bagi semua pihak.</p>
+                    </div>
+                </div>
+        </section>
+
+        <section id="kontak"> 
+            <div class="container">
+                <div class="kontak-container">
+                    <p><span>Email: safauinsgd@gmail.com</span><span>No Telepon: 0851-8303-8124</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            function showSection(section) {
+                // Menyembunyikan semua section
+                document.getElementById('home-section').style.display = 'none';
+                document.getElementById('makanan-section').style.display = 'none';
+                document.getElementById('minuman-section').style.display = 'none';
+                document.getElementById('fotocopy-section').style.display = 'none';
+    
+                // Menampilkan section yang dipilih
+                if (section === 'home') {
+                    document.getElementById('home-section').style.display = 'block';
+                } else if (section === 'makanan') {
+                    document.getElementById('makanan-section').style.display = 'block';
+                } else if (section === 'minuman') {
+                    document.getElementById('minuman-section').style.display = 'block';
+                } else if (section === 'fotocopy') {
+                    document.getElementById('fotocopy-section').style.display = 'block';
+                }
+            }
+        </script>
+    </body>
+</html>

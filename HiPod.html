@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi.Pod</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+</head>
+<body>
+    <header class="header">
+        <h2>Hi.Pod</h2>
+            
+                <div class="dropdown-content" id="menu-dropdown">
+                    <a href="#">Gorengan Bu Ade</a>
+                    <a href="#">PUSAT ES</a>
+                    <a href="#">Fotocopy</a>
+                    <a href="#">Warung Audrey Food</a>
+                    <a href="#">Seblak Hot Jeletot Teh Eva</a>
+                    <a href="#">Hi.Pod</a>
+                    <a href="#">Es Teler Sultan Jatinangor</a>
+                    <a href="#">Batagor 486</a>
+                </div>
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart" id="cart-btn" onclick="openCart()"></i>
+                <span class="cart-badge" id="cart-count">0</span> <!-- Badge hanya menampilkan jumlah -->
+            </div>
+            
+            </div>            
+        </div>
+    </header>
+
+    <section id="store-details">
+        <img src="images/Hi pud.jpg" alt="Hi.Pod">
+        <p>Mochi Daifuku dengan Berbagai Varian Rasa</p>
+        <p><strong>Penilaian: 4.9</strong> | 999+ ulasan</p>
+    </section>
+
+    <section id="menu-section">
+        <h2>Menu Mochi</h2>
+        <div class="order-items">
+            <div class="order-card">
+                <img src="images/Mochi Coklat.jpg" alt="Mochi Coklat">
+                <div class="card-content">
+                    <h3>Mochi Coklat</h3>
+                    <p>Rp8.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Mochi Coklat', 8000)">-</button>
+                        <span class="quantity" id="quantity-Mochi Coklat">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Mochi Coklat', 8000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Mochi Coklat', 8000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+            <div class="order-card">
+                <img src="images/Mochi Original.jpg" alt="Mochi Original">
+                <div class="card-content">
+                    <h3>Mochi Original</h3>
+                    <p>Rp8.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Mochi Original', 8000)">-</button>
+                        <span class="quantity" id="quantity-Mochi Original">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Mochi Original', 8000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Mochi Original', 8000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+            <div class="order-card">
+                <img src="images/Mochi Macha.jpg" alt="Mochi Macha">
+                <div class="card-content">
+                    <h3>Mochi Macha</h3>
+                    <p>Rp8.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Mochi Macha', 8000)">-</button>
+                        <span class="quantity" id="quantity-Mochi Macha">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Mochi Macha', 8000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Mochi Macha', 8000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <img src="images/Mochi Strawbery.jpg" alt="Mochi Strawbery">
+                <div class="card-content">
+                    <h3>Mochi Strawbery</h3>
+                    <p>Rp8.000</p>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" onclick="decreaseQuantity('Mochi Strawbery', 8000)">-</button>
+                        <span class="quantity" id="quantity-Mochi Strawbery">0</span>
+                        <button class="quantity-btn" onclick="increaseQuantity('Mochi Strawbery', 8000)">+</button>
+                    </div>
+                    <button class="order-btn" onclick="addToCart('Mochi Strawbery', 8000)">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal Konfirmasi Pesanan -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Keranjang Belanja</h2>
+            <div id="cart-items">
+                <!-- Items akan diisi secara dinamis -->
+            </div>
+            <div class="total-section">
+                <p><strong>Total Pembayaran: <span id="total-price">Rp0</span></strong></p>
+            </div>
+            <button class="order-btn" id="place-order-btn" onclick="confirmOrder()">Buat Pesanan</button>
+        </div>
+    </div>
+
+    <!-- Modal Struk Pesanan -->
+    <div id="receipt-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReceiptModal()">&times;</span>
+            <h2>Struk Pesanan</h2>
+            <p><strong>Nama Toko:</strong> Hi.Pod </p>
+            <div id="receipt-items">
+                <!-- Daftar pesanan akan ditambahkan secara dinamis -->
+            </div>
+            <div class="total-section">
+                <p><strong>Total Pembayaran: <span id="receipt-total-price">Rp0</span></strong></p>
+            </div>
+
+            <!-- Metode Pembayaran -->
+            <div class="payment-method">
+                <h3>Metode Pembayaran</h3>
+                <label>
+                    <input type="radio" name="payment-method" value="cash" onclick="selectPaymentMethod('cash')" checked>
+                    Cash
+                </label>
+                <label>
+                    <input type="radio" name="payment-method" value="qris" onclick="selectPaymentMethod('qris')">
+                    QRIS
+                </label>
+            </div>
+
+            <!-- Gambar QRIS (disembunyikan secara default) -->
+            <div id="qris-image" style="display: none; text-align: center;">
+                <img src="images/qris.jpg" alt="QRIS" style="width: 200px; margin-top: 10px;">
+                <!-- Menampilkan metode pembayaran yang dipilih -->
+            <p><strong>Metode Pembayaran:</strong> <span id="payment-method-text">Qriss</span></p>
+            <button onclick="confirmOrderAndRedirect('Hi.pod')">Pesan ke Hi.pod</button>
+            </div>
+
+            <!-- Menampilkan metode pembayaran yang dipilih -->
+            <p><strong>Metode Pembayaran:</strong> <span id="payment-method-text">Cash</span></p>
+            <button onclick="confirmOrderAndRedirect('Hi.pod')">Pesan ke Hi.pod</button>
+        </div>
+    </div>
+            
+
+    <!-- Tambahan untuk memisahkan file JS -->
+    <script src="script.js"></script>
+</body>
+</html>
